@@ -1,0 +1,162 @@
+// Styling for the masthead
+header.masthead {
+  height: 100vh;
+  min-height: auto;
+  color: $header-font-color;
+  .header-content-inner {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      font-weight: 300;
+      .title-highlight{
+        color: $theme-primary;
+        font-weight: 700;
+      }
+    }
+    hr {
+      margin: 30px auto;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 50px;
+      color: fade-out(white, .3);
+    }
+  }
+  .header-content {
+    width: 100vh;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    div{
+      margin-top: 30px;
+    }
+  }
+  .img-row{
+    .header-content-image{
+      display: none
+    }
+  }
+  @media (min-width: 768px) {
+    min-height: 600px;
+    .masthead-container{
+      display: flex;
+      height: 100%;
+      .header-content-inner {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left:0;
+        right:0;
+        margin: auto;
+        width:65%;
+        height: 30%;
+        h1 {
+          width: 30rem;      
+          font-size: 2em;
+          text-align: left;
+        }
+        p {
+          font-size: 18px;
+          max-width: 80%;
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+      .img-row{     
+        width: 100%;
+        height: auto;
+        padding-top: 65px;
+        justify-content: flex-end;  
+        align-items: flex-end;     
+        .header-content-image{
+          display: block;
+        }       
+      }
+    }
+  }
+}
+section.route-map{
+  height: 100vh !important;
+  .section-heading{
+    color: $theme-primary;
+    font-weight: 700;
+  }
+  .text-faded{
+    color: $header-font-color;
+    font-style: italic;
+    font-size: 200;
+  }
+  .info-cards-row{
+    margin-top: 60px;
+    .map_route-card{
+      background-color: white;
+      border-radius: 21px;
+      height: 430px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      .circle{
+        height: 115px;
+        width: 115px;
+        background-color: transparent;
+        border-style: solid;
+        border-color: $theme-primary;
+        border-width: 7px;
+        border-radius: 360px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .inner-circle{
+          background-color: $theme-primary;       
+          height: 81px;
+          width: 81px;
+          border-radius: 360px;
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          align-items: center;
+          h3{
+            color: white;
+            font-size: 30;
+            font-weight: 700;
+            margin: 0;
+          }
+          p{
+            color: white;
+            margin: 0;
+            font-weight: 300;
+          }
+        }
+        
+      }
+      .content{
+        padding-left: 30px;
+        padding-right: 30px;
+        flex:1; 
+        h3{
+          font-weight: bold;
+          font-size: 25px;
+        }
+        p{
+          font-weight: 300;
+          font-family: sans-serif;
+          color: $regular-font-color;
+        }
+      }
+      .footer{
+        background-color: $footer-map-route-color;
+        height: 60px;
+        width: 100%;
+        border-bottom-left-radius: 21px;
+        border-bottom-right-radius: 21px;
+      }
+    }
+  }
+}
