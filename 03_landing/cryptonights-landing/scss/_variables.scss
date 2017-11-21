@@ -2,16 +2,25 @@
 
 // Gray and Brand Colors for use across theme
 
-$theme-primary: #E74939;
-$theme-secondary: #E6EAEE;
+$theme-primary: #DF3F53;
 
 $nav-bar-font-color:#393737;
-$font-color:#95989A;
+$font-color:#808080;
 $header-font-color:#95989A;
-$regular-font-color:#505152;
+$regular-font-color:#808080;
 $italic-font-color:#5F6060;
 
-$footer-map-route-color:#D4DBE2;
+$color-bar-users:#5441A4;
+$color-bar-founders: #E7755A;
+$color-bar-rewards: #5CD0E2;
+
+$background-card-color:#17171B;
+$footer-map-route-color:black;
+
+$primary-background: #17171B;
+$secondary-background: #101016;
+
+$theme-secondary: $secondary-background;
 
 $gray-base: #000 !default;
 $gray-darker: lighten($gray-base, 13.5%) !default;
