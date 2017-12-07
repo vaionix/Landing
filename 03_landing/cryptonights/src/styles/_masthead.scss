@@ -1,0 +1,281 @@
+// Styling for the masthead
+header.masthead {
+  height: 100vh;
+  min-height: auto;
+  color: $header-font-color;
+  background-color: $primary-background;
+  .header-content-inner {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    h1 {
+      text-align: center;
+      font-size: 2em;
+      font-weight: 300;
+      .title-highlight{
+        color: $theme-primary;
+        font-weight: 700;
+      }
+    }
+    hr {
+      margin: 30px auto;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 50px;
+      color: fade-out(white, .3);
+    }
+  }
+  .header-content {
+    width: 100vh;
+    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    div{
+      margin-top: 30px;
+    }
+  }
+  .img-row{
+    .header-content-image{
+      display: none
+    }
+  }
+  @media (min-width: 768px) {
+    min-height: 600px;
+    .masthead-container{
+      display: flex;
+      height: 100%;
+      .header-content-inner {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left:0;
+        right:0;
+        margin: auto;
+        width:65%;
+        height: 30%;
+        h1 {
+          width: 30rem;      
+          font-size: 2em;
+          text-align: left;
+        }
+        p {
+          font-size: 18px;
+          max-width: 80%;
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+      .img-row{     
+        width: 100%;
+        height: auto;
+        padding-top: 65px;
+        justify-content: flex-end;  
+        align-items: flex-end;     
+        .header-content-image{
+          display: block;
+        }       
+      }
+    }
+  }
+}
+
+section.full-screen{
+  min-height: 100vh !important;
+  .section-heading{
+    color: $theme-primary;
+    font-weight: 700;
+  }
+  .text-faded{
+    color: $header-font-color;
+    font-style: italic;
+    font-size: 200;
+  }
+}
+
+section.route-map{
+  .info-cards-row{
+    margin-top: 60px;
+
+    >.separator{
+      margin-top: 70px;
+    }
+    .map_route-card{
+      background-color: $background-card-color;
+      border-radius: 21px;
+      height: 430px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      .circle{
+        position: absolute;
+        top: -57px;
+        height: 115px;
+        width: 115px;
+        background-color: transparent;
+        border-style: solid;
+        border-color: $theme-primary;
+        border-width: 7px;
+        border-radius: 360px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .inner-circle{
+          background-color: $theme-primary;       
+          height: 81px;
+          width: 81px;
+          border-radius: 360px;
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          align-items: center;
+          h3{
+            color: white;
+            font-size: 30;
+            font-weight: 700;
+            margin: 0;
+          }
+          p{
+            color: white;
+            margin: 0;
+            font-weight: 300;
+          }
+        }
+        
+      }
+      .separator{
+        height: 100px;
+        width: 100%;
+      }
+      .content{
+        padding-left: 30px;
+        padding-right: 30px;
+        flex:1; 
+        h3{
+          font-weight: bold;
+          font-size: 25px;
+          color:white;
+        }
+        p{
+          font-weight: 300;
+          font-family: sans-serif;
+          color: $regular-font-color;
+        }
+      }
+      .footer{
+        background-color: $footer-map-route-color;
+        height: 60px;
+        width: 100%;
+        border-bottom-left-radius: 21px;
+        border-bottom-right-radius: 21px;
+      }
+    }
+  }
+}
+
+section.project-details{
+  background-color: $primary-background;
+  h3{
+    color: white;
+  }
+  img{
+    height: 64px;
+    width: 64px;
+  }
+}
+
+section.ico-distribution{
+  background-color: black;
+  background-image: url('../static/img/sectionbg.jpg');
+  padding: 91px 0 !important;
+  .section-heading{
+    color: white;
+    font-weight: 700;
+  }
+  .text-faded{
+    color: white;
+  }
+  .bar{
+    height: 10px;
+  }
+  .info-bar, .info-bar-inverted    {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+    p{
+      margin: 0;
+    }
+    .arrow{
+      width: 0px;
+      height: 0px;
+      margin-top: 5px;
+      border-left: 15px solid transparent;
+      border-right: 15px solid transparent;
+      border-bottom: 15px solid;
+    }
+  }
+  .user-distribution{
+    width: calc(85% - 70px);
+    color:$color-bar-users;
+    .bar{
+      background-color: $color-bar-users;
+    }
+  }
+  .founders-distribution{
+    width: 12%;
+    color: $color-bar-founders;
+    .info-bar{
+      display: none;
+    }
+    .bar{
+      background-color: $color-bar-founders;
+    }
+    .arrow{
+      border-bottom-color: $color-bar-founders;
+    }
+    @media (min-width: 768px) {
+      margin-left: 35px;
+      margin-right: 35px;
+      .info-bar-inverted{
+        display: none;
+      }
+      .info-bar{
+        display: flex !important;
+      }
+    }
+   }
+  .rewards-distribution{
+    width: 3%;
+    color: $color-bar-rewards;
+    .bar{
+      background-color: $color-bar-rewards;
+    }
+    .arrow{
+      border-bottom-color: $color-bar-rewards;
+    }
+   }
+}
+
+section.documents{
+  background-color: $primary-background;  
+  .section-heading{
+    color: $theme-primary;
+    font-weight: 700;
+  }
+  .separator{
+    margin-top: 35px;
+    h3{
+      margin-top: 10px;
+      color:white;
+    }
+
+    .fa-file-text{
+      color:$theme-primary
+    }
+  }
+}
