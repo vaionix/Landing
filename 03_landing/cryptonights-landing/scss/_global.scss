@@ -93,3 +93,9 @@ img::-moz-selection {
 body {
   -webkit-tap-highlight-color: $gray-darker;
 }
+
+.red-border-hover:hover{
+  width:110%;
+  height: 110%;
+  border-color: $theme-primary;
+}
